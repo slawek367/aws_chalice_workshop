@@ -16,6 +16,6 @@ Users with AWS Management Console access can sign-in at: https://357174612071.si
 ## Todo app
 Todo Application: A serverless web application to manage Todo’s. This tutorial will walk through creating a serverless web API to create, update, get, and delete Todo’s, managing Todo’s in a database, adding authorization with JWT, and creating a full CI/CD pipeline for the application. AWS services covered include AWS Lambda, Amazon API Gateway, Amazon DynamoDB, AWS CodeBuild, and AWS CodePipeline.
 
-##Deploy app
-```
-chalice deploy
+##commands
+*deploy: chalice deploy
+*delete app: chalice delete
