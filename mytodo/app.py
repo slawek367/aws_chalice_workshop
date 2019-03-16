@@ -74,3 +74,17 @@ def add_new_todo():
 @app.route('/todos/{uid}', methods=['GET'])
 def get_todo(uid):
     return get_app_db().get_item(uid)
+
+@app.route('/todos/{uid}', methods=['DELETE'])
+def delete_todo(uid):
+    return get_app_db().delete_item(uid)
+
+@app.route('/todos/{uid}', methods=['PUT'])
+def update_todo(uid):
+    body = app.current_request.json_body
+    get_app_db().update_item(
+        uid,
+        description=body.get('description'),
+        state=body.get('state'),
+        metadata=body.get('metadata')
+    )
